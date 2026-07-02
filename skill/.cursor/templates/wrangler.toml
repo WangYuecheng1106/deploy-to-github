@@ -1,0 +1,16 @@
+# Cloudflare Pages / Workers configuration template
+# Variables (substituted by the skill):
+#   {{REPO}}          project name (typically the repo name)
+#   {{OUTPUT_DIR}}    e.g. "dist", "out", "public", ".next"
+#   {{COMPAT_DATE}}   e.g. "2026-06-01"
+# Docs: https://developers.cloudflare.com/pages/functions/wrangler-configuration/
+
+name = "{{REPO}}"
+pages_build_output_dir = "{{OUTPUT_DIR}}"
+compatibility_date = "{{COMPAT_DATE}}"
+compatibility_flags = ["nodejs_compat"]
+
+# For Next.js on Cloudflare Pages, install @cloudflare/next-on-pages and run
+#   npx @cloudflare/next-on-pages
+# before deploy, then point pages_build_output_dir to ".vercel/output/static"
+# (the adapter writes there).

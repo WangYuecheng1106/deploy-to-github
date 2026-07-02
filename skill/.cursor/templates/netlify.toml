@@ -1,0 +1,24 @@
+# Netlify configuration template
+# Variables (substituted by the skill):
+#   {{BUILD_CMD}}     e.g. "npm run build"
+#   {{OUTPUT_DIR}}    e.g. "dist" or "out"
+#   {{FRAMEWORK}}     one of: static | next | astro | vite | hugo | nuxt | svelte
+
+[build]
+  command = "{{BUILD_CMD}}"
+  publish = "{{OUTPUT_DIR}}"
+
+# SPA fallback for client-side routing (static / Vite).
+# Comment out for SSR frameworks (Next.js plugin handles its own).
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Next.js on Netlify: uncomment the block below and run
+#   npm i -D @netlify/plugin-nextjs
+# [[plugins]]
+#   package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NODE_VERSION = "20"

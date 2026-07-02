@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "name": "{{REPO}}",
+  "framework": "{{FRAMEWORK_SLUG}}",
+  "buildCommand": "{{BUILD_CMD}}",
+  "outputDirectory": "{{OUTPUT_DIR}}",
+  "installCommand": "npm ci",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "git": {
+    "deploymentEnabled": true
+  }
+}
